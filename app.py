@@ -56,7 +56,7 @@ def download_public_key(username):
 
 @app.route('/retrieve/app')
 def download():
-	filepath = './media/standalone/'+'app.zip'
+	filepath = './media/public-keys/'+'app.zip'
 	if(os.path.isfile(filepath)):
 		return send_file(filepath, attachment_filename='encrypt-decrypt.zip',as_attachment=True)
 	else:
